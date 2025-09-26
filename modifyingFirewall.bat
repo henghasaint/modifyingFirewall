@@ -13,5 +13,5 @@ set "logfile=logs\execution_!datetime:~0,8!_!datetime:~8,6!.log"
 
 REM Execute program and record log
 echo [Start Time] !date! !time! >> "!logfile!"
-modifyingSecurityGroup.exe --minRequiredIPs 1 --maxRequiredIPs 1>> "!logfile!" 2>&1
+modifyingSecurityGroup.exe --minRequiredIPs 1 --maxRequiredIPs 1 >> "!logfile!" 2>&1
 echo [End Time] !date! !time! >> "!logfile!"
