@@ -6,5 +6,4 @@ vendor
 .vscode
 sftp.json
 /.vs
-config.toml
 需求描述

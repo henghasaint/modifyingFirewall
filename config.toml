@@ -1,0 +1,27 @@
+# 在config.toml中添加钉钉Webhook配置
+[dingtalk]
+webhook = "https://oapi.dingtalk.com/robot/send?access_token=babxxd37f00cc91f8340971fxx0410a79"
+
+# 腾讯云-Argosy帐号
+[[creds]]
+SecretID = "AKIDoINxxxxxiNv"
+SecretKey = "bIwY4Ujxxxxxi"
+InstanceIds = ["lhins-7d30qzot"]
+
+
+
+
+# 实例防火墙规则
+[[instances]]
+InstanceId = "lhins-7d30qzot"
+Region = "ap-tokyo"
+  [[instances.firewallRules]]
+  Protocol = "TCP"
+  Port = "22"
+  Action = "ACCEPT"
+  FirewallRuleDescription = "SSH login for Linux"
+  [[instances.firewallRules]]
+  Protocol = "TCP"
+  Port = "80,443"
+  Action = "ACCEPT"
+  FirewallRuleDescription = "HTTP"
